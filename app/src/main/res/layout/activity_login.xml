@@ -1,57 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@mipmap/bg"
+    >
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            android:text="用户名:" />
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/button_style"
+            android:gravity="bottom|center"
+            android:paddingBottom="15dp"
+            android:text="登录"
+            android:textColor="#FFFFFB"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/account"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:autofillHints="请输入用户名"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            android:text="密码:"
-
-            />
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="请输入用户名"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="请输入密码"
             android:inputType="textPassword"
-            android:autofillHints="请输入密码" />
-    </LinearLayout>
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
 
+
+        <TextView
+            android:id="@+id/forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:text="忘记密码" />
+    </LinearLayout>
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="登陆" />
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:text="登陆"
+
+        />
 
 </LinearLayout>

@@ -2,10 +2,11 @@ package com.example.boardcastproject;
 
 import android.app.Activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityCollector {
-    public static List<Activity> activities;
+    public static List<Activity> activities=new ArrayList<>();
 
     public static void addActivity(Activity activity){
         activities.add(activity);
