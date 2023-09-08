@@ -52,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
             builder.setTitle("警告");
             builder.setMessage("你被强制下线,请重新登录");
             builder.setCancelable(false);
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     ActivityCollector.finishAll(); // 销毁所有活动

@@ -25,7 +25,7 @@
     <item  android:state_pressed="true">
         <shape>
             <!--点击之后的颜色-->
-            <solid android:color="#06f57a"/>
+            <solid android:color="#52F5DD06"/>
             <!--设置角的弧度-->
             <!--radius 越大，按钮越圆-->
             <corners android:radius="30dp"/>
