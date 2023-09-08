@@ -10,6 +10,18 @@
     android:background="@mipmap/bg"
     android:gravity="center">
 
+    <TextView
+        android:id="@+id/current_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#92757373"
+        android:textColor="#FF0000"
+        />
+
     <Button
         android:id="@+id/force_offline"
         android:layout_width="match_parent"

@@ -59,10 +59,6 @@ public class LoginActivity extends BaseActivity {
             rememberPass.setChecked(true);
         }
 
-        ImageView gifImageView = findViewById(R.id.gifImageView);
-        RequestOptions options = new RequestOptions()
-                .diskCacheStrategy(DiskCacheStrategy.ALL);
-        Glide.with(this).asGif().apply(options).load(R.mipmap.xinhai).override(400, 200).into(gifImageView);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +76,7 @@ public class LoginActivity extends BaseActivity {
                     }
                     editor.apply();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("username", account); // 将用户名添加到意图中
                     startActivity(intent);
                     finish();
                     Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
@@ -94,13 +91,18 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 builder = new AlertDialog.Builder(LoginActivity.this)
-                        .setTitle("退出程序").setMessage("确定要退出程序吗？")
+                        .setTitle("退出程序")
+                        .setMessage("确定要退出程序吗?")
                         .setIcon(R.mipmap.exit_icon)
-                        .setPositiveButton("确定", (dialog, which) -> {
+                        .setNegativeButton("确定", (dialog, which) -> {
+                            Toast.makeText(LoginActivity.this, "退出成功", Toast.LENGTH_SHORT).show();
                             finish();
                             dialog.dismiss();
                         })
-                        .setNegativeButton("取消", (dialog, which) -> dialog.dismiss())
+                        .setPositiveButton("取消", (dialog, which) -> {
+                            Toast.makeText(LoginActivity.this, "取消成功", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        })
                         .show(); // 添加这一行来显示对话框
             }
         });
